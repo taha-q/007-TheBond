@@ -2,7 +2,6 @@
 import requests
 
 
-# cppTaha: i cleaned up the excess functions and added a timeout so request wont hang for long 
 class SearchUsername:
     def __init__(self , username:str ,  timeout:float=5) -> None:
         self.username = username
