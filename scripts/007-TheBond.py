@@ -4,14 +4,16 @@
 import pyfiglet
 import logging
 import os
+import sys
+import time
 
 # Class Imports
 from Instagram import SearchInsta
-from Search import WebSearch
-from PhoneLookup import Lookup
+#from Search import WebSearch
+#from PhoneLookup import Lookup
 from IpLookup import IpLookup
 from SearchUsername import SearchUsername
-from EmailLookup import EmailLookup
+#from EmailLookup import EmailLookup
 
 # Author
 author = "Deadshot0x7"
@@ -22,7 +24,12 @@ if  __name__=="__main__":
     # Print the banner
     nameOfTheScript = "007-The Bond"
     banner = pyfiglet.figlet_format(nameOfTheScript, font = "slant")
-    print(banner)
+    # a simple typewriter effect
+    for char in banner:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.002)
+    print()
 
     # Information of the project and the author
     print(f"\t Script by {author} V.3.0 \n \n") 

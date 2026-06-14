@@ -67,16 +67,17 @@ class SearchInsta:
                 if result.status_code == 200:
                     user_data = result.json()["data"]["user"]
 
+                    print(("*" * 25) + "Info-Table" + ( "*" * 25) )
                     for key, value in user_data.items():
                         # Only process keys we defined in our label map
                         if key in self.labels:
-                            describer = labels[key]
+                            describer = self.labels[key]
                             if isinstance(value, dict) and "count" in value:
                                 clean_value = f"{value['count']:,}"
                             else:
                                 clean_value = value
-                            print(f"{describer}: {clean_value}")
-
+                            print(f"+ \033[34m{describer}\033[0m: {clean_value}")
+                    print("*" * ( 50 + len("Info-Table") ) )
                 else:
                     print(f"({result.status_code}) @{self.username} is unreachable")
 
