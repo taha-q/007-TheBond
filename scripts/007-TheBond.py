@@ -9,11 +9,11 @@ import time
 
 # Class Imports
 from Instagram import SearchInsta
-#from Search import WebSearch
-#from PhoneLookup import Lookup
+from Search import WebSearch
+from PhoneLookup import Lookup
 from IpLookup import IpLookup
 from SearchUsername import SearchUsername
-#from EmailLookup import EmailLookup
+from EmailLookup import EmailLookup
 
 # Author
 author = "Deadshot0x7"
